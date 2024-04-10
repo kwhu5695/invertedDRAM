@@ -13,3 +13,7 @@
 ./vampire -f tests/traces/write1.trace -c configs/default.cfg -d WR -p ASCII -csv write1s.csv
 
 ./vampire -f tests/traces/writeF.trace -c configs/default.cfg -d WR -p ASCII -csv writeFs.csv
+
+./vampire -f tests/traces/rdwrite0.trace -c configs/default.cfg -d WR -p ASCII -csv rdwrite0.csv
+
+./vampire -f tests/traces/rdwrite1.trace -c configs/default.cfg -d WR -p ASCII -csv rdwrite1.csv
