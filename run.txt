@@ -1,3 +1,7 @@
 ./vampire -f <file_name> -c <config_file> -d {MEAN|DIST|WR|RD_WR} -p {BINARY|ASCII} [-v {A|B|C|Cust}] [-s] [-dramSpec <dramspec_file>]
 
 ./vampire -f tests/traces/0.0-autoprecharge-read.trace -c tests/configs/cust_vendor/vendorC.cfg -d MEAN -p ASCII -csv test.csv
+
+
+# working
+./vampire -f tests/traces/0-dist.trace -c configs/default.cfg -d DIST -p ASCII -csv test.csv
