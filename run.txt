@@ -5,3 +5,9 @@
 
 # working
 ./vampire -f tests/traces/0-dist.trace -c configs/default.cfg -d DIST -p ASCII -csv test.csv
+
+./vampire -f tests/traces/0-wr.trace -c configs/default.cfg -d WR -p ASCII -csv write0s.csv
+
+./vampire -f tests/traces/write0.trace -c configs/default.cfg -d WR -p ASCII -csv write0s.csv
+
+./vampire -f tests/traces/write1.trace -c configs/default.cfg -d WR -p ASCII -csv write1s.csv
