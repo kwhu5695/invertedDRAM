@@ -9,5 +9,5 @@ for ((N=1; N<=128; N++)); do
     output_filename="${N}-rd.csv"
 
     # Run the command on the file
-    ../../vampire -f "modified_files_rd/${filename}" -c ../../configs/default.cfg -d WR -p ASCII -csv "rd_csvs/$output_filename"
+    ../../vampire -f "modified_files_rd/${filename}" -c ../../configs/default.cfg -d RD_WR -p ASCII -csv "rd_csvs/$output_filename"
 done
