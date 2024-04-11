@@ -28,7 +28,7 @@ for N in range(1, 129):
 
     # Write modified content to new file
     filename = '{}-wr.trace'.format(N)
-    with open(os.path.join('modified_files', filename), 'w') as f:
+    with open(os.path.join('modified_files_wr', filename), 'w') as f:
         f.write('\n'.join(modified_content))
 
     # print(f'File {filename} created successfully.')

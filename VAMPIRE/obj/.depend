@@ -1,23 +1,3 @@
-obj/address.o: src/address.cpp src/address.h src/consts.h
-obj/command.o: src/command.cpp src/command.h src/address.h src/consts.h \
- src/helper.h src/config.h src/globalDebug.h
-obj/config.o: src/config.cpp src/config.h src/consts.h src/helper.h \
- src/address.h src/globalDebug.h
-obj/dramSpec.o: src/dramSpec.cpp src/dramSpec.h src/consts.h src/helper.h \
- src/address.h src/config.h src/globalDebug.h
-obj/dramStruct.o: src/dramStruct.cpp src/dramStruct.h src/consts.h \
- src/config.h
-obj/equations.o: src/equations.cpp src/helper.h src/consts.h \
- src/address.h src/config.h src/globalDebug.h src/equations.h \
- src/dramSpec.h src/statistics.h src/dramStruct.h
-obj/helper.o: src/helper.cpp src/helper.h src/consts.h src/address.h \
- src/config.h src/globalDebug.h
-obj/mapping.o: src/mapping.cpp src/vampire.h src/config.h src/consts.h \
- src/dramSpec.h src/helper.h src/address.h src/globalDebug.h \
- src/dramStruct.h src/equations.h src/statistics.h src/parser.h \
- src/command.h
-obj/parser.o: src/parser.cpp src/parser.h src/consts.h src/address.h \
- src/command.h src/helper.h src/config.h src/globalDebug.h
 obj/statistics.o: src/statistics.cpp src/statistics.h src/consts.h \
  src/dramStruct.h src/config.h src/helper.h src/address.h \
  src/globalDebug.h src/dramSpec.h src/vampire.h src/equations.h \
@@ -26,3 +6,23 @@ obj/vampire.o: src/vampire.cpp src/vampire.h src/config.h src/consts.h \
  src/dramSpec.h src/helper.h src/address.h src/globalDebug.h \
  src/dramStruct.h src/equations.h src/statistics.h src/parser.h \
  src/command.h
+obj/command.o: src/command.cpp src/command.h src/address.h src/consts.h \
+ src/helper.h src/config.h src/globalDebug.h
+obj/mapping.o: src/mapping.cpp src/vampire.h src/config.h src/consts.h \
+ src/dramSpec.h src/helper.h src/address.h src/globalDebug.h \
+ src/dramStruct.h src/equations.h src/statistics.h src/parser.h \
+ src/command.h
+obj/helper.o: src/helper.cpp src/helper.h src/consts.h src/address.h \
+ src/config.h src/globalDebug.h
+obj/config.o: src/config.cpp src/config.h src/consts.h src/helper.h \
+ src/address.h src/globalDebug.h
+obj/dramStruct.o: src/dramStruct.cpp src/dramStruct.h src/consts.h \
+ src/config.h
+obj/parser.o: src/parser.cpp src/parser.h src/consts.h src/address.h \
+ src/command.h src/helper.h src/config.h src/globalDebug.h
+obj/address.o: src/address.cpp src/address.h src/consts.h
+obj/dramSpec.o: src/dramSpec.cpp src/dramSpec.h src/consts.h src/helper.h \
+ src/address.h src/config.h src/globalDebug.h
+obj/equations.o: src/equations.cpp src/helper.h src/consts.h \
+ src/address.h src/config.h src/globalDebug.h src/equations.h \
+ src/dramSpec.h src/statistics.h src/dramStruct.h
