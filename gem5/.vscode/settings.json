@@ -1,0 +1,23 @@
+{
+    "cmake.sourceDirectory": "/home/funnydunny5/ece511/gem5/ext/dsent",
+    "files.associations": {
+        "*.inc": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "string_view": "cpp",
+        "functional": "cpp",
+        "iomanip": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "ostream": "cpp",
+        "ratio": "cpp",
+        "sstream": "cpp",
+        "stop_token": "cpp",
+        "streambuf": "cpp",
+        "regex": "cpp",
+        "tuple": "cpp"
+    }
+}
