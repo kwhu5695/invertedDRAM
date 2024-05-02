@@ -1188,7 +1188,6 @@ class Packet : public Printable
         data = (PacketDataPtr)p;
         flags.set(DYNAMIC_DATA);
     }
-
     /**
      * get a pointer to the data ptr.
      */
