@@ -489,7 +489,7 @@ MemCtrl::processRespondEvent(MemInterface* mem_intr,
             "processRespondEvent(): Some req has reached its readyTime\n");
 
     MemPacket* mem_pkt = queue.front();
-
+    DPRINTF(MemCtrl, "%x",*mem_pkt->pkt->getPtr());
     // media specific checks and functions when read response is complete
     // DRAM only
     mem_intr->respondEvent(mem_pkt->rank);
