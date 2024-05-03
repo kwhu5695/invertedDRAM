@@ -42,7 +42,7 @@
  * @file
  * Definition of a crossbar object.
  */
-
+#define THRESHOLD 32
 #include "mem/coherent_xbar.hh"
 
 #include "base/compiler.hh"
@@ -150,7 +150,25 @@ CoherentXBar::recvTimingReq(PacketPtr pkt, PortID cpu_side_port_id)
 {
     // determine the source port based on the id
     ResponsePort *src_port = cpuSidePorts[cpu_side_port_id];
+    if(pkt->hasData() && pkt->getSize() == 64){
+        std::cout << "Before: " << *(pkt->getPtr<uint64_t>());
+        int numones = 0;
+        uint64_t* inverted = (uint64_t*) malloc(pkt->getSize());
+        std::memcpy(inverted, pkt->getPtr<uint64_t>(), pkt->getSize());
 
+        for(int i = 0; i < 64; i++){
+            numones += *inverted & 1;
+            *inverted >>= 1;
+        }
+
+        if(numones > THRESHOLD){
+            std::memcpy(inverted, pkt->getPtr<uint64_t>(), pkt->getSize());
+            *inverted = ~*inverted;
+            std::memcpy(pkt->getPtr<uint64_t>(), inverted, pkt->getSize());
+        }
+        std::cout << "After: " << *(pkt->getPtr<uint64_t>()) << std::endl;
+        
+    }
     // remember if the packet is an express snoop
     bool is_express_snoop = pkt->isExpressSnoop();
     bool cache_responding = pkt->cacheResponding();
