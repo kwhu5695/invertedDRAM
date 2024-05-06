@@ -162,7 +162,7 @@ def main():
         cmd = "READ" if is_read else "WRITE"
         addr = packet.addr
         tick = packet.tick
-        ascii_out.write(f"0x{int(addr):0>8X} {cmd} {tick}\n")
+        ascii_out.write(f"0x{int(addr):0>8X} {cmd} {tick} ")
         # if packet.HasField('pkt_id'):
         #     ascii_out.write('%s,' % (packet.pkt_id))
         # if packet.HasField('flags'):
@@ -171,8 +171,14 @@ def main():
         # else:
         #     ascii_out.write('%s,%s,%s,%s' % (cmd, packet.addr, packet.size,
         #                                    packet.tick))
-        # if packet.HasField('pc'):
-        #     ascii_out.write(',%s\n' % (packet.pc))
+        # print(packet, num_packets)
+        data_bytes = b''.join(packet.our_data)
+    
+        # Convert bytes object to hexadecimal string
+        hex_string = data_bytes.hex()
+        
+        # Write the hexadecimal string to the output file
+        ascii_out.write('0x' + hex_string + '\n')
         # else:
         #     ascii_out.write('\n')
 

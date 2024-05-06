@@ -62,7 +62,7 @@ struct PacketInfo
     uint32_t size;
     Request::FlagsType flags;
     Addr pc;
-    char* dataPtr;
+    char** dataPtr;
     RequestorID id;
 
     explicit PacketInfo(const PacketPtr& pkt) :
@@ -71,7 +71,7 @@ struct PacketInfo
         size(pkt->getSize()),
         flags(pkt->req->getFlags()),
         pc(pkt->req->hasPC() ? pkt->req->getPC() : 0),
-        dataPtr(pkt->getPtr<char>()),
+        dataPtr(pkt->getPtr<char*>()),
         id(pkt->req->requestorId())  { }
 };
 
