@@ -95,7 +95,6 @@ ProtoOutputStream::write(const Message& msg)
         auto msg_size = msg.ByteSizeLong();
 #   endif
     codedStream.WriteVarint32(msg_size);
-
     // Write the message itself to the stream
     msg.SerializeWithCachedSizes(&codedStream);
 }

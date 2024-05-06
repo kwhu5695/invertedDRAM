@@ -120,7 +120,7 @@ MemTraceProbe::handleRequest(const probing::PacketInfo &pkt_info)
     if (withPC && pkt_info.pc != 0)
         pkt_msg.set_pc(pkt_info.pc);
     pkt_msg.set_pkt_id(pkt_info.id);
-    pkt_msg.set_our_data(0, pkt_info.dataPtr);
+    pkt_msg.add_our_data(pkt_info.dataPtr);
     traceStream->write(pkt_msg);
 }
 
