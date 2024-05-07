@@ -173,10 +173,13 @@ def main():
         #                                    packet.tick))
         # print(packet, num_packets)
         data_bytes = b''.join(packet.our_data)
-    
+
+        # Reverse the order of bytes
+        reversed_data_bytes = data_bytes[::-1]
+
         # Convert bytes object to hexadecimal string
-        hex_string = data_bytes.hex()
-        
+        hex_string = reversed_data_bytes.hex()
+
         # Write the hexadecimal string to the output file
         ascii_out.write('0x' + hex_string + '\n')
         # else:

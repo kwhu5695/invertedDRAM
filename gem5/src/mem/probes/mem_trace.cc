@@ -121,7 +121,8 @@ MemTraceProbe::handleRequest(const probing::PacketInfo &pkt_info)
         pkt_msg.set_pc(pkt_info.pc);
     pkt_msg.set_pkt_id(pkt_info.id);
     char* p = *pkt_info.dataPtr;
-    pkt_msg.add_our_data(p);
+    size_t dataSize = 64;
+    pkt_msg.add_our_data(p, dataSize);
     traceStream->write(pkt_msg);
 }
 
