@@ -17,3 +17,7 @@
 ./vampire -f tests/traces/rdwrite0.trace -c configs/default.cfg -d WR -p ASCII -csv rdwrite0.csv
 
 ./vampire -f tests/traces/rdwrite1.trace -c configs/default.cfg -d WR -p ASCII -csv rdwrite1.csv
+
+
+# final
+./vampire -f gem5.trace -c configs/default.cfg -d WR -p ASCII -csv gem5.csv
