@@ -1,0 +1,51 @@
+[2024-05-07.15:28:39] [1m[34mConfig file: configs/default.cfg[0m
+[2024-05-07.15:28:39] [1m[34mUsing data dependency model (traceType): RD_WR[0m
+[2024-05-07.15:28:39] [1m[34mUsing parserType: ASCII[0m
+[2024-05-07.15:28:39] [1m[34mOutput csv file: gem5.csv[0m
+[2024-05-07.15:28:39] [1m[34mUsing trace file: `pt2Traces/allInverted.trace'[0m
+[2024-05-07.15:28:39] [1m[34mPrinting stats...[0m
+                               ACT count:                51333
+                               PRE count:                51333
+                              PREA count:                    0
+                                RD count:                51333
+                                WR count:                    0
+                               RDA count:                    0
+                               WRA count:                    0
+                               REF count:                    0
+                              REFB count:                    0
+                         PDF_F_ACT count:                    0
+                         PDF_F_PRE count:                    0
+                         PDN_S_PRE count:                    0
+                              SREN count:                    0
+                              SREX count:                    0
+
+                              ACT cycles:               307998
+                              PRE cycles:               307998
+                             PREA cycles:                    0
+                               RD cycles:               513330
+                               WR cycles:                    0
+                              RDA cycles:                    0
+                              WRA cycles:                    0
+                              REF cycles:                    0
+                             REFB cycles:                    0
+                        PDF_F_ACT cycles:                    0
+                        PDF_F_PRE cycles:                    0
+                        PDN_S_PRE cycles:                    0
+                             SREN cycles:                    0
+                             SREX cycles:                    0
+
+                         totalCycleCount:          18146129007     
+
+                   totalActStandbyCycles:               102666       # Total number of cycles for which the rank was in active standby mode
+                   totalPreStandbyCycles:          18146026341       # Total number of cycles for which the rank was in precharge standby mode
+
+                       total read energy:          3.25535e+08   pJ
+                      total write energy:                    0   pJ
+                       totalPreCmdEnergy:          5.72343e+07   pJ
+                       totalActCmdEnergy:          5.72343e+07   pJ
+          total precharge standby energy:          2.15958e+12   pJ
+             total active standby energy:          1.32809e+07   pJ
+                            total energy:          2.16003e+12   pJ
+                                avgPower:              47.6142   mW
+                              avgCurrent:              35.2697   mA
+[2024-05-07.15:28:39] [1m[34mStats written as csv to `gem5.csv'.[0m
