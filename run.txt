@@ -21,3 +21,6 @@
 
 # final
 ./vampire -f gem5.trace -c configs/default.cfg -d WR -p ASCII -csv gem5.csv
+
+./parse_gem5_trace.py --gem5_trace_file [input] --dramsim3_trace_file [output] \
+--dramsim3_tCK [tCK]
